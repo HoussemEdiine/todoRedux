@@ -6,6 +6,9 @@ const Todos = ({dispatch,state}) => {
   const [text , settext]  = useState('')
       
    const Ajout_todo = () =>{
+             if(text.trim() ==''){
+               return alert('invalid')
+             }
           dispatch(addtodo(text))
           settext('')
    }
